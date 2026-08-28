@@ -11,7 +11,7 @@ import urllib.request
 from pathlib import Path
 
 
-PROJECT_DIR = Path("/ephemeral/yexin/workspace/project/minimax_h3")
+PROJECT_DIR = Path(__file__).resolve().parents[1]
 DEFAULT_OUT = PROJECT_DIR / "outputs" / "natural_halfbody_200cases"
 
 PERSONS = [

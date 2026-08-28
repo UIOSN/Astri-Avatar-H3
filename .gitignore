@@ -8,3 +8,11 @@ __pycache__/
 *.py[cod]
 *.log
 .DS_Store
+
+# Downloaded model/data files and generated evaluation outputs.
+data/
+benchmark_outputs/
+evaluation/**/data/
+evaluation/**/benchmark_outputs/
+evaluation/**/outputs/
+evaluation/**/work/
