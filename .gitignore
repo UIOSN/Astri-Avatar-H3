@@ -1,0 +1,10 @@
+.venv/
+models/
+outputs/
+prompts/
+server_inputs/
+server_outputs/
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store
