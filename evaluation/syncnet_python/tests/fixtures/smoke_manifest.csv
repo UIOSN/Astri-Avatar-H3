@@ -1,2 +1,0 @@
-id,generated_video,real_video,source_image,gt_au_csv,pred_au_csv
-smoke,../../data/example.avi,../../data/example.avi,../../img/ex1.jpg,gt_au.csv,pred_au.csv

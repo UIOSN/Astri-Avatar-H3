@@ -38,5 +38,3 @@ uv pip install --force-reinstall sgl-deep-gemm \
 import torch
 print("torch", torch.__version__, "cuda", torch.version.cuda, "available", torch.cuda.is_available())
 PY
-
-"$VENV_DIR/bin/python" "$PROJECT_DIR/scripts/patch_runtime_encoder_device.py"

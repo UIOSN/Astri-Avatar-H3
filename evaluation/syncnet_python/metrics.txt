@@ -1,9 +1,0 @@
-| 指标                 | 衡量什么            | 需要什么输入                         | 越高越好？ | 你怎么测试                                        |
-| ------------------ | --------------- | ------------------------------ | ----- | -------------------------------------------- |
-| **CPBD**           | 视频/帧的清晰度、模糊程度   | 生成视频                           | ↑     | 对生成视频逐帧计算 CPBD，再平均                           |
-| **SyncNet Conf**   | 嘴型和音频的同步置信度     | 生成视频 + 音频                      | ↑     | SyncNet 对 video/audio 做匹配                    |
-| **SyncNet Dist**   | 嘴型和音频的同步距离      | 生成视频 + 音频                      | ↓     | SyncNet distance                             |
-| **FVD**            | 整体视频分布质量        | Real videos + Generated videos | ↓     | 用 VideoMAE/I3D 类特征计算 Fréchet distance        |
-| **ID-Sim**         | 生成的人是否还是原来那个人   | source face + generated video  | ↑     | Face recognition embedding cosine similarity |
-| **Action Unit F1** | 表情/AU 是否和目标动作一致 | GT/驱动 AU + generated video     | ↑     | AU detection → precision/recall/F1           |
-| **FID**            | 图像/frame 分布质量   | Real frames + Generated frames | ↓     | Inception feature → FID                      |

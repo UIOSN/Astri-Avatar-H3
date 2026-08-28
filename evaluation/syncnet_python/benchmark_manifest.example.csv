@@ -1,2 +1,0 @@
-id,generated_video,real_video,source_image,gt_au_csv,pred_au_csv
-sample_0001,/data/generated/0001.mp4,/data/real/0001.mp4,/data/source/0001.jpg,/data/au/real_0001.csv,/data/au/generated_0001.csv
