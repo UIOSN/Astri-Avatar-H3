@@ -1,7 +1,7 @@
 # MiniMax-H3 Natural Half-Body 200-Case Generation
 
-This repository contains only the code needed to generate the 200 natural
-half-body T2VA cases.
+This repository contains the code needed to generate the 200 natural
+half-body T2VA cases and evaluate the generated videos.
 
 ## Included files
 
@@ -13,6 +13,8 @@ half-body T2VA cases.
 - `scripts/install_runtime.sh`: installs the local inference runtime.
 - `scripts/download_model.sh`: downloads MiniMax-H3 model files.
 - `requirements.txt`: inference dependency declaration.
+- `evaluation/syncnet_python/`: CPBD, SyncNet, FID, FVD, ID-Sim, and AU-F1
+  benchmark implementation, environment setup, tests, and documentation.
 
 Generated videos, prompts, logs, model files, datasets, caches, and virtual
 environments are excluded by `.gitignore`.
@@ -60,3 +62,26 @@ static medium shot with mid-torso framing, visible face and hands, subtle
 gestures, synchronized English speech, and clean isolated audio. The 200 cases
 vary the subject, clothing, environment, emotion, dialogue, and gesture using
 deterministic modular combinations.
+
+## Evaluation
+
+```bash
+cd evaluation/syncnet_python
+./setup_benchmark_env.sh --cuda
+./download_model.sh
+```
+
+Prepare a CSV or JSONL manifest following `benchmark_manifest.example.csv`,
+then run:
+
+```bash
+.venv/bin/python run_benchmark.py \
+  --manifest /path/to/manifest.csv \
+  --output_dir /path/to/benchmark_outputs \
+  --metrics all \
+  --device cuda
+```
+
+See `evaluation/syncnet_python/BENCHMARK.md` for metric definitions, manifest
+fields, sampling controls, and reporting guidance. Evaluation weights and
+outputs are downloaded or generated locally and are not committed.
