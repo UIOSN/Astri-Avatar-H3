@@ -7,6 +7,8 @@ half-body T2VA cases and evaluate the generated videos.
 
 - `scripts/run_natural_halfbody_200cases.py`: builds the 200 prompts and runs
   the jobs sequentially.
+- `scripts/generate_ref2va_halfbody_400_prompts.py`: generates 400 prompt-only
+  Ref2VA cases from 20 expressions and 20 gestures without starting a model.
 - `scripts/infer_h3.py`: submits jobs to the local SGLang `/v1/videos` API and
   downloads completed videos.
 - `scripts/serve_sglang.sh`: starts the MiniMax-H3 SGLang server.
@@ -62,6 +64,18 @@ static medium shot with mid-torso framing, visible face and hands, subtle
 gestures, synchronized English speech, and clean isolated audio. The 200 cases
 vary the subject, clothing, environment, emotion, dialogue, and gesture using
 deterministic modular combinations.
+
+## Generate 400 Ref2VA prompts only
+
+```bash
+./scripts/generate_ref2va_halfbody_400_prompts.py
+```
+
+This command does not start SGLang or call a model. It writes 400 individual
+prompt files and a `prompts.jsonl` manifest to
+`prompts/ref2va_halfbody_400cases`. Every prompt uses `<Picture 1>` as the
+subject identity reference and `<Audio 1>` as the preserved driving speech.
+Use `--output-dir` to select another output directory.
 
 ## Evaluation
 

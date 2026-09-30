@@ -1,0 +1,29 @@
+subject_definitions:
+<Subject 1> is the speaking person in the target video. The subject's identity and facial features are referenced from <Picture 1>.
+<Picture 1> is the identity and facial-feature reference for <Subject 1>.
+<Audio 1> is the driving speech audio for <Subject 1>, providing the complete spoken content, original voice, speaking pace, pauses, rhythm, and emotional timing.
+
+summary:
+[reference generation + audio reuse] The target video generates a natural single-person half-body digital-human speaking performance. The identity and facial features of <Subject 1> are referenced from <Picture 1>, while the half-body framing, body posture, and movements are newly generated. <Subject 1> speaks according to <Audio 1>, with facial expressions and body movements synchronized to the audio.
+
+retention_analysis:
+<Subject 1> (present throughout the target video): partially_preserved - The subject's identity and facial features remain consistent with <Picture 1>, while the half-body pose, hand gestures, and composition are newly generated for the target video.
+<Picture 1> (identity reference for <Subject 1>): attribute_transfer - The facial structure, facial features, and overall identity of the person in the reference image are transferred to <Subject 1>.
+<Audio 1> (driving speech audio for <Subject 1>): fully_preserved - The spoken content, original voice, speaking pace, pauses, and rhythm are fully preserved and used to drive the subject's lip movements, expressions, and actions.
+
+detailed_description:
+The target video presents a realistic single-person half-body digital-human speaking performance.
+
+[Shot 1] The camera presents <Subject 1> in a front-facing half-body medium shot. The subject is centered and looks naturally toward the camera, with the head, shoulders, upper body, arms, and hands visible. The identity and facial features of <Subject 1> are referenced from <Picture 1>. The body, pose, hands, and half-body composition may be newly generated even when they are not visible in <Picture 1>. The subject speaks according to <Audio 1>, with accurate lip synchronization.
+
+Facial expression: a relieved expression, with softened eyes and a relaxed gentle smile. The subject blinks naturally, and the eyebrows, eyes, cheeks, and corners of the mouth change subtly according to the meaning, tone, emphasis, pauses, and rhythm of <Audio 1>.
+
+Body movement: The subject gestures once with the right hand and later once with the left hand, keeping both motions small and distinct. Natural subtle head and shoulder movement accompanies the speech. The body remains balanced and stable throughout.
+
+All expressions and movements should be natural, fluid, restrained, and synchronized with <Audio 1>. Keep the identity and facial features of <Subject 1> stable. Avoid facial drift, identity changes, inaccurate lip synchronization, malformed hands, extra fingers, sudden movements, exaggerated acting, or meaningless repeated gestures. Keep the camera stable. Do not add cuts, camera movement, subtitles, titles, logos, watermarks, or other text.
+
+overall_soundscape:
+Fully preserve the original speech in <Audio 1>. Do not regenerate, replace, rewrite, or repeat the spoken content. Do not alter the speaker's voice, speaking pace, pauses, or timing. Do not add additional voices or prominent environmental sounds beyond those already present in <Audio 1>.
+
+non_diegetic_music:
+N/A
